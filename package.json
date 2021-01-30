@@ -1,7 +1,7 @@
 {
   "name": "jest-lighthouse",
   "version": "0.0.1",
-  "description": "",
+  "description": "Helper functions to simplify Jest integration with Lighthouse",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/mmarkelov/jest-lighthouse.git"
   },
-  "keywords": [],
+  "keywords": [
+    "jest",
+    "lighthouse",
+    "jest-lighthouse"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
