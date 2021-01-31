@@ -18,7 +18,7 @@ async function getLighthouseReport(
   })
 }
 
-function getLighthouseResult(lhr: Report, property: string): number {
+function getLighthouseResult(lhr: Report, category: string): number {
   const properties = new Map()
     .set('accessibility', lhr.lhr.categories.accessibility.score * 100)
     .set('performance', lhr.lhr.categories.performance.score * 100)
@@ -26,7 +26,7 @@ function getLighthouseResult(lhr: Report, property: string): number {
     .set('bestPractices', lhr.lhr.categories['best-practices'].score * 100)
     .set('seo', lhr.lhr.categories.seo.score * 100)
 
-  return properties.get(property)
+  return properties.get(category)
 }
 
 export { getLighthouseReport, getLighthouseResult }

@@ -43,3 +43,5 @@ export interface Report {
     }
   }
 }
+
+export type Score = 'perfect' | 'normal' | 'bad'
