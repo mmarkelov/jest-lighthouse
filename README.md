@@ -30,6 +30,10 @@ describe('Lighthouse', () => {
     const port = 9222; // same port as defined in launchOptions
     lhr = await getLighthouseReport(url, port);
   });
+  it('passes an seo audit through Lighthouse', async () => {
+    const accessibilityScore = await getLighthouseResult(lhr, 'seo');
+    expect(accessibilityScore).toBeGreaterThanOrEqual(90);
+  });
 })
 
 ...
@@ -49,6 +53,10 @@ describe('Lighthouse', () => {
   beforeAll(async () => {
     const port = new URL(browser.wsEndpoint()).port;
     lhr = await getLighthouseReport(url, port);
+  });
+  it('passes an accessibility audit through Lighthouse', async () => {
+    const accessibilityScore = await getLighthouseResult(lhr, 'accessibility');
+    expect(accessibilityScore).toBeGreaterThanOrEqual(90);
   });
 })
 
