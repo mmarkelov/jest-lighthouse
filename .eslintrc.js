@@ -8,6 +8,9 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
   ],
+  rules: {
+    '@typescript-eslint/ban-ts-comment': 'off',
+  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
