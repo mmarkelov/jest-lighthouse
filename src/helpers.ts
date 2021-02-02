@@ -23,7 +23,7 @@ function getLighthouseResult(lhr: Report, category: string): number {
     .set('accessibility', lhr.lhr.categories.accessibility.score * 100)
     .set('performance', lhr.lhr.categories.performance.score * 100)
     .set('pwa', lhr.lhr.categories.pwa.score * 100)
-    .set('bestPractices', lhr.lhr.categories['best-practices'].score * 100)
+    .set('best-practices', lhr.lhr.categories['best-practices'].score * 100)
     .set('seo', lhr.lhr.categories.seo.score * 100)
 
   return properties.get(category)
