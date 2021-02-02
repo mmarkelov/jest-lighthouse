@@ -1,4 +1,8 @@
-import { checkScore } from '../../matchers/utils'
+import {
+  checkScore,
+  checkScoreValue,
+  checkNumValue,
+} from '../../matchers/utils'
 import { NORMAL, PERFECT } from '../../constants'
 
 describe('checkScore', () => {
@@ -12,5 +16,25 @@ describe('checkScore', () => {
     expect(checkScore(90, NORMAL)).toBe(true)
     expect(checkScore(50, NORMAL)).toBe(true)
     expect(checkScore(45, NORMAL)).toBe(false)
+  })
+})
+
+describe('checkScoreValue', () => {
+  it('should not throw an error for valid input', () => {
+    expect(() => checkScoreValue(PERFECT)).not.toThrow()
+  })
+
+  it('should throw an error for invalid input', () => {
+    expect(() => checkScoreValue('invalid')).toThrow()
+  })
+})
+
+describe('checkNumValue', () => {
+  it('should not throw an error for valid input', () => {
+    expect(() => checkNumValue(75)).not.toThrow()
+  })
+
+  it('should throw an error for invalid input', () => {
+    expect(() => checkNumValue(103)).toThrow()
   })
 })
