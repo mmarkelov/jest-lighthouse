@@ -12,7 +12,7 @@ npm install -D jest-lighthouse
 
 ## toHaveLighthouseAudit
 
-**expect(lhr: <Lighthouse report>).toHaveLighthouseAudit(category: string, value?: <number | Score>)**
+**expect(lhr: <Report>).toHaveLighthouseAudit(category: string, value?: <number | Score>)**
 
 This function check if lighthouse report pass audit
 
