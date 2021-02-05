@@ -1,6 +1,6 @@
 # jest-lighthouse
 
-![CI](https://github.com/mmarkelov/jest-lighthouse/workflows/Node.js/badge.svg)
+![CI](https://github.com/mmarkelov/jest-lighthouse/workflows/Node.js%20CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/mmarkelov/jest-lighthouse/badge.svg)](https://coveralls.io/github/mmarkelov/jest-lighthouse)
 ![npm](https://img.shields.io/npm/v/jest-lighthouse)
 
