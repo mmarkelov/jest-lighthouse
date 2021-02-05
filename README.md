@@ -10,6 +10,12 @@ Helper functions to simplify [Jest](https://github.com/facebook/jest) integratio
 npm install -D jest-lighthouse
 ```
 
+## toHaveLighthouseAudit
+
+**expect(lhr: <Lighthouse report>).toHaveLighthouseAudit(category: string, value?: <number | Score>)**
+
+This function check if lighthouse report pass audit
+
 ## Using with [jest-playwright](https://github.com/playwright-community/jest-playwright)
 
 ```js
@@ -35,8 +41,7 @@ describe('Lighthouse', () => {
     lhr = await getLighthouseReport(url, port);
   });
   it('passes an seo audit through Lighthouse', async () => {
-    const accessibilityScore = await getLighthouseResult(lhr, 'seo');
-    expect(accessibilityScore).toBeGreaterThanOrEqual(90);
+    expect(lhr).toHaveLighthouseAudit('seo', 90);
   });
 })
 
@@ -59,8 +64,7 @@ describe('Lighthouse', () => {
     lhr = await getLighthouseReport(url, port);
   });
   it('passes an accessibility audit through Lighthouse', async () => {
-    const accessibilityScore = await getLighthouseResult(lhr, 'accessibility');
-    expect(accessibilityScore).toBeGreaterThanOrEqual(90);
+    expect(lhr).toHaveLighthouseAudit('performance', 'perfect');
   });
 })
 
