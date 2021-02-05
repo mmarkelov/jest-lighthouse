@@ -1,5 +1,9 @@
 # jest-lighthouse
 
+![CI](https://github.com/mmarkelov/jest-lighthouse/workflows/Node.js/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/mmarkelov/jest-lighthouse/badge.svg)](https://coveralls.io/github/mmarkelov/jest-lighthouse)
+![npm](https://img.shields.io/npm/v/jest-lighthouse)
+
 Helper functions to simplify [Jest](https://github.com/facebook/jest) integration with [Lighthouse](https://github.com/GoogleChrome/lighthouse)
 
 ```bash
