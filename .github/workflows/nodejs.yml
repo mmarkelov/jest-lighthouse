@@ -12,10 +12,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: npm ci
       - name: Lint
-        run: |
-          yarn run tsc --noEmit
-      - run: npm run build
-      - run: npm test
-      - run: npx codecov
+        run: npm run lint
+      - name: Build project
+        run: npm run build
+      - name: Run tests
+        run: npm run test
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
